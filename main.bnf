@@ -1,0 +1,31 @@
+<library_system> ::= <action_list>
+
+<action_list> ::= <action> | <action> ";" <action_list>
+
+<action> ::= <borrow> | <return> | <add_book> | <remove_book>
+
+<borrow> ::= "borrow" "(" <book> "," <duration> ")"
+
+<return> ::= "return" "(" <book> ")"
+
+<add_book> ::= "add" "(" <book> ")"
+
+<remove_book> ::= "remove" "(" <book> ")"
+
+<book> ::= <title> "," <author> "," <genre> "," <cover_type>
+
+<title> ::= <string>
+
+<author> ::= <string>
+
+<genre> ::= "fantasy" | "education" | "biography" | "childrens"
+
+<cover_type> ::= "hardcover" | "paperback"
+
+<duration> ::= <number> "days" | <number> "weeks" | <number> "months"
+
+<string> ::= <letter> | <letter> <string>
+
+<letter> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | "C" | ... | "Z"
+
+<number> ::= "0" | "1" | "2" | "3" | ... | "9"
